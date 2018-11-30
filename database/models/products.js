@@ -8,7 +8,6 @@ const products = postgres.define(
       type: Sequelize.INTEGER,
       autoIncrement: true,
       primaryKey: true,
-      allowNull: false,
     },
     name: { type: Sequelize.STRING },
     price: { type: Sequelize.FLOAT },
@@ -28,9 +27,6 @@ const products = postgres.define(
     review_count: { type: Sequelize.INTEGER },
     stars: { type: Sequelize.INTEGER },
     gender: { type: Sequelize.STRING },
-  },
-  {
-    timestamps: false,
   },
   postgres.sync()
     .then(() => {

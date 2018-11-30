@@ -10,15 +10,15 @@ import styles from '../css/app-style.css';
 
 export default class App extends Component {
   constructor(props) {
-    super(props),
-      this.state = {
-        product: '',
-        featured: '',
-        options: [],
-        images: [],
-        magnify: false,
-        relatedProducts: []
-      }
+    super(props);
+    this.state = {
+      product: '',
+      featured: '',
+      options: [],
+      images: [],
+      magnify: false,
+      relatedProducts: []
+    }
     axios.defaults.baseURL = 'http://' + process.env.HOSTNAME + ':' + process.env.PORT;
     this.findThreeRandomCategoriesNeqCurrentProduct = this.findThreeRandomCategoriesNeqCurrentProduct.bind(this);
   }
@@ -50,7 +50,6 @@ export default class App extends Component {
     axios
       .get('/api/product')
       .then((response) => {
-        console.log(response)
         this.setState({
           product: response.data,
           featured: response.data.featured,
@@ -62,13 +61,9 @@ export default class App extends Component {
         const categories = this.findThreeRandomCategoriesNeqCurrentProduct().join(',');
         axios.get(`/api/product?categories=${categories}&limit=3`)
           .then((response) => {
-            console.log(response.data)
             this.setState({ relatedProducts: response.data })
-          })
-      })
-      .catch((err) => {
-        console.log(err)
-      })
+          });
+      });
   }
 
   render() {

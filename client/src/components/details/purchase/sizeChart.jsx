@@ -6,7 +6,7 @@ export default function SizeChart(props) {
   return (
     <div className={styles.sizeChartItem} >
       <img className={styles.sizeChartIcon} src="https://png.icons8.com/metro/1600/ruler.png" alt="" />
-      <a href="" class={appStyles.link}>Size Chart</a>
+      <a href="" className={appStyles.link}>Size Chart</a>
     </div>
   )
 }

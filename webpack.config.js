@@ -1,51 +1,51 @@
-const path = require("path");
+const path = require('path');
 require('dotenv').config();
-const webpack = require('webpack')
-require("fs")
+const webpack = require('webpack');
+require('fs');
 
 module.exports = {
-  mode: "development",
-  entry: path.resolve(__dirname, "./client/src/"),
+  mode: 'development',
+  entry: path.resolve(__dirname, './client/src/'),
   output: {
-    path: path.resolve(__dirname, "./client/dist"),
-    filename: "bundle.js"
+    path: path.resolve(__dirname, './client/dist'),
+    filename: 'bundle.js',
   },
   module: {
     rules: [
       {
-        loader: "babel-loader",
+        loader: 'babel-loader',
         test: /\.js[x]?/,
         exclude: /node_modules/,
         options: {
-          presets: ["react", "env"]
-        }
+          presets: ['react', 'env'],
+        },
       },
       {
         test: /\.css$/,
         use: [
-          { loader: "style-loader" },
+          { loader: 'style-loader' },
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               modules: true,
-              localIdentName: '[name]__[local]--[hash:base64]'
-            }
-          }
-        ]
-      }
+              localIdentName: '[name]__[local]--[hash:base64]',
+            },
+          },
+        ],
+      },
     ],
   },
   node: {
-    fs: 'empty'
+    fs: 'empty',
   },
 
   resolve: {
-    extensions: [".js", ".jsx"]
+    extensions: ['.js', '.jsx'],
   },
   plugins: [
     new webpack.DefinePlugin({
       'process.env.HOSTNAME': JSON.stringify('localhost'),
       'process.env.PORT': JSON.stringify(process.env.PORT),
-    })
-  ]
+    }),
+  ],
 };

@@ -6,7 +6,7 @@
   "scripts": {
     "seed": "node ./seedData.js",
     "start": "nodemon ./server/bin/www",
-    "build": "webpack -w",
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -32,7 +32,7 @@
     "morgan": "1.9.1",
     "mysql": "2.16.0",
     "mysql2": "1.6.1",
-    "nodemon": "1.18.4",
+    "nodemon": "^1.18.7",
     "normalize-port": "1.0.0",
     "path": "0.12.7",
     "pg": "7.6.0",

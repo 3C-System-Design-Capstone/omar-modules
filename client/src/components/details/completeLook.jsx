@@ -10,8 +10,8 @@ export default function Options(props) {
           <h4 className={styles.completeTitle}> COMPLETE THE LOOK</h4>
           <div className={styles.completeClothingSection}>
             <div className={styles.CompletClothingJustify}>
-              {props.relatedProducts.map((product) => {
-                return <CompleteClothingListItem product={product} />
+              {props.relatedProducts.map((product, i) => {
+                return <CompleteClothingListItem product={product} key={i} />
               })}
             </div>
           </div>

@@ -1,10 +1,8 @@
-import React, { Component } from "react";
-import styles from "../../css/options-style.css"
-import Checkmark from "./checkmark"
+import React, { Component } from 'react';
+import styles from '../../css/options-style.css';
 
-export default function Options(props){
-  console.log(props.options)
-  return(
+export default function Options(props) {
+  return (
     <div className={styles.OptinoSection}>
       <h5 className={styles.OptionTitle}>
         AVAILABLE COLORS
@@ -15,27 +13,16 @@ export default function Options(props){
       <div className={styles.OptionColorSection}>
         <div className={styles.OptionsColorIcons}>
           {
-            props.options.map((option) => (
-              <div className={styles.OptionsColorIconItem} key={option}>
+            props.options.map((option, i) => (
+              <div className={styles.OptionsColorIconItem} key={i}>
                 <a className={styles.OptionsColorIconBackground} href="">
                   <img className={styles.OptionsColorsIconsPic} src={option} alt=""/>
                 </a>
               </div>
             ))
           }
-          {/* <div style={styles.OptionsColorIconItem}>
-            <Checkmark />
-            <a style={styles.OptionsColorIconBackground} href="">
-              <div style={styles.OptionsColorsIconsPic}></div>
-            </a>
-          </div>
-          <div style={styles.OptionsColorIconItem}>
-            <a style={styles.OptionsColorIconBackground} href="">
-              <div style={styles.OptionsColorsIconsPic}></div>
-            </a>
-          </div> */}
         </div>
       </div>
     </div>
-  )
+  );
 }

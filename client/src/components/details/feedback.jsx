@@ -8,7 +8,6 @@ export default function Feedback(props) {
     <div>
       <div className={styles.detailsFeedback}>
         <span className={styles.ratings}>
-          {console.log(props.product)}
           {
             [...Array(5)].map((e, i) => {
               if (i <= props.product.stars) {

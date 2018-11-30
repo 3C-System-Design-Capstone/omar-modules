@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "../../css/completeLook.css";
+import React from 'react';
+import styles from '../../css/completeLook.css';
 
 export default function CompleteClothingListItem(props) {
   return (
@@ -13,6 +13,5 @@ export default function CompleteClothingListItem(props) {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

@@ -13,6 +13,6 @@ services:
     ports:
       - "5432:5432"
     environment: 
-      - POSTGRES_USER=omarjandali
-      - POSTGRES_PASSWORD=hackreactor25
+      - POSTGRES_USER=webaccess
+      - POSTGRES_PASSWORD=popcorn
       - POSTGRES_DB=addidas
