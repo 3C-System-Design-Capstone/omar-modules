@@ -19,13 +19,12 @@ export default class App extends Component {
       magnify: false,
       relatedProducts: []
     }
-    axios.defaults.baseURL = 'http://' + process.env.HOSTNAME + ':' + process.env.PORT;
+    axios.defaults.baseURL = 'http://localhost:3001/';
     this.findThreeRandomCategoriesNeqCurrentProduct = this.findThreeRandomCategoriesNeqCurrentProduct.bind(this);
   }
 
 
   componentDidMount() {
-    console.log('http://' + process.env.HOSTNAME + ':' + process.env.PORT)
     this.fetchProduct()
   }
 

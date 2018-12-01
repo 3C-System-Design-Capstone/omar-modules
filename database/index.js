@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 require('dotenv').config();
 
 const connectionPostgres = new Sequelize('addidas', 'webaccess', 'popcorn', {
-  host: 'localhost',
+  host: 'db',
   dialect: 'postgres',
 });
 

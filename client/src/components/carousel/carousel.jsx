@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ImageList from "./imageList";
-import Status from "./status";
 import styles from "../../css/carousel/carousel.css"
 
 export default function Details(props) {
